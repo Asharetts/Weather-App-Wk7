@@ -15,28 +15,42 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div>logo</div>
-        search bar <button type="button" class="btn btn-success">Search</button>
-        <h1>Las Vegas</h1>
-        <ul>
-          <li>day/time</li>
-          <li>description</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
-            19<a href="#">°C</a> |<a href="#">°F</a>
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            search bar
+            <button type="button" class="btn btn-success">Search</button>
+            <h1>Las Vegas</h1>
             <ul>
-              <li>Percipitation: 0%</li>
-              <li>Humidity: 20%</li>
-              <li>Wind: 3MPH</li>
+              <li>day/time</li>
+              <li>description</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="sunny"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>19</strong>
+                  <span class="units">
+                    <a href="#">°C</a> |<a href="#">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Percipitation: 0%</li>
+                <li>Humidity: 20%</li>
+                <li>Wind: 3MPH</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
         <small>
           This project was created by Amanda LS with
           <a
@@ -52,6 +66,7 @@
         >
       </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
