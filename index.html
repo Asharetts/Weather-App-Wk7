@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
@@ -20,22 +21,18 @@
           <div class="overview">
             search bar
             <button type="button" class="btn btn-success">Search</button>
-            <h1>Las Vegas</h1>
+            <h1 id="city">Las Vegas</h1>
             <ul>
-              <li>day/time</li>
-              <li>description</li>
+              <li><span id="date"></span><span id="time"></span></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="sunny"
-                  class="float-left"
-                />
+                <img src="" alt="sunny" class="float-left" id="icon" />
                 <div class="float-left">
-                  <strong>19</strong>
+                  <strong id="temperature"></strong>
                   <span class="units">
                     <a href="#">°C</a> |<a href="#">°F</a>
                   </span>
@@ -44,9 +41,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Percipitation: 0%</li>
-                <li>Humidity: 20%</li>
-                <li>Wind: 3MPH</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
