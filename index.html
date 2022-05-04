@@ -18,10 +18,28 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
-            search bar
-            <button type="button" class="btn btn-success">Search</button>
-            <h1 id="city">Las Vegas</h1>
+            <h1 id="city"></h1>
             <ul>
               <li><span id="date"></span><span id="time"></span></li>
               <li id="description"></li>
@@ -34,7 +52,7 @@
                 <div class="float-left">
                   <strong id="temperature"></strong>
                   <span class="units">
-                    <a href="#">°C</a> |<a href="#">°F</a>
+                    <a href="#">°C</a> |<a href="#" id="fahrenheit-link">°F</a>
                   </span>
                 </div>
               </div>
